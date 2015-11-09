@@ -1,0 +1,9 @@
+Manifest-Version: 1.0
+Created-By: 1.6.0_45-b06 (Sun Microsystems Inc.)
+Implementation-Vendor: Wishper
+Implementation-Title: turbine
+Implementation-Version: 1.7.10_04
+TweakClass: ru.turbine.launch.TurbineTweaker
+TweakName: Turbine
+TweakVersion: 1.7.10_04
+TweakAuthor: Whisper
