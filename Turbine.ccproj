@@ -1,0 +1,16 @@
+%YAML 1.2
+---
+!CodeClimate.Deb.Project
+arraySniffer: [15, 37, 223, 189, 112, 95, 113, 78, 190, 252, 219, 155, 86, 108, 184, 240]
+versionRef: 0
+NameProject: Turbine
+ProjectID: Turbine
+versionMinor: 1
+GUIDProject: bddf250f-5f70-4e71-befc-db9b566cb8f0
+Domen: ru.turbine
+build: 4
+versionState: alpha
+versionForge: 10.13.0.1180
+versionMajor: 0
+versionMine: 1.7.10
+...
