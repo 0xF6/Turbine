@@ -15,7 +15,20 @@ buildscript {
     }
 }
 
+apply plugin: 'java'
 apply plugin: 'forge'
+apply plugin: 'maven'
+
+repositories {
+    maven { // the repo from which to get NEI and stuff
+        name 'CB Repo'
+        url "http://chickenbones.net/maven/"
+    }
+    maven { // The repo from which to get waila
+        name "Mobius Repo"
+        url "http://mobiusstrip.eu/maven"
+    }
+}
 
 ext.configFile = file "build.gradlew.target"
 
@@ -30,42 +43,46 @@ group = "${config.project_domen}"
 archivesBaseName = "${config.project_id}-${config.project_forge_version}.${config.project_build}-${config.project_mine_version}"
 
 minecraft {
+
+	replaceIn "launch/TurbineTweaker.java"
+    replace "%APP_VERSION%", "${config.project_version}"
+
     version = "${config.project_mine_version}-${config.project_forge_version}"
     assetDir = "eclipse/assets"
 }
-
-dependencies {
+jar {
+	//manifest.attributes("Implementation-Vendor": "Wishper");
+    //manifest.attributes("Implementation-Title": "turbine");
+    //manifest.attributes("Implementation-Version": "1.7.10_04");
+    //manifest.attributes("TweakClass": "ru.turbine.launch.TurbineTweaker");
+    //manifest.attributes("TweakName": "Turbine");
+    //manifest.attributes("TweakVersion": "1.7.10_04");
+    // manifest.attributes("TweakAuthor": "Whisper");
 }
-sourceSets {
-    main {
-        resources {
-            srcDir 'resources'
-        }
-        java {
-            srcDir 'source'
-        }
+task devJar(type: Jar, dependsOn: 'classes') {
+    from(sourceSets.main.output) {
+        include '**'
     }
-}
-task devJar(type: Jar){
-    from sourceSets.main.output
+
+    extension = 'jar'
     classifier = 'dev'
-}
-task sourcesJar(type: Jar){
-    from sourceSets.main.allJava
-    classifier = 'sources'
 }
 artifacts {
     archives devJar
-    archives sourcesJar
 }
 processResources{
-    inputs.property "version", project.version
-    inputs.property "mcversion", project.minecraft.version
+
+    // exclude xcf files, as they are for development only
+    exclude '**/*.xcf'
+
+    // replace stuff in mcmod.info, nothing else
     from(sourceSets.main.resources.srcDirs) {
-        include 'mcmod.info'
-        expand 'version':project.version, 'mcversion':project.minecraft.version
+        include '*.info'
+        //expand 'app_version': config.project_version, 'app_build': config.project_build, 'rc_version': config.rc_version
     }
+   
+    // Copy everything else
     from(sourceSets.main.resources.srcDirs) {
-        exclude 'mcmod.info'
+        include 'assets/**/*.*'
     }
 }
