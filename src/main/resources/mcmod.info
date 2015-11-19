@@ -1,0 +1,170 @@
+[
+{
+	"modid": "Turbine",
+	"name": "Turbine",
+	"description": "Steam overclock!",
+	"version": "1.27 Beta",
+	"credits": "By Whisper",
+
+	"logoFile": "Image\logo.turbine.png",
+	"authors": [ "Whisper" ],
+	"dependencies": [
+		"MinecraftForge"
+	]
+},
+{
+	"modid": "RCFramework",
+	"name": "RCFramework - Core",
+	"description": "CSharp Power!",
+	"authors": [
+        "Whisper"
+      ],
+	"version": "8.1.2.5700 Beta",
+  	"dependants" : [],
+	"logoFile": "Image\logo.rc.framework.png",
+	"authors": [ "Whisper" ]
+},
+{
+   "modid": "RC_Framework_JNI_Wrapper",
+   "name": "RC.JWrapper",
+   "description": "CSharp Power to Java!",
+   "authors": [
+     "Whisper"
+   ],
+   "logoFile": "Image\logo.rc.framework.png",
+   "version": "2.153 Alpha",
+   "dependants" : [],
+},
+{
+  "modid": "RC_Collections",
+  "name": "RC.Collections",
+  "description": "CSharp Power!",
+  "authors": [
+    "Whisper"
+  ],
+  "logoFile": "Image\logo.rc.framework.png",
+  "dependencies": [
+	"RCFramework"
+  ]
+},
+{
+   "modid": "RC_Compress",
+   "name": "RC.Compress",
+   "description": "CSharp Power!",
+   "authors": [
+     "Whisper"
+   ],
+   "logoFile": "Image\logo.rc.framework.png",
+   "dependencies": [
+ 	"RCFramework"
+   ]
+},
+{
+   "modid": "RC_Configure",
+   "name": "RC.Configure",
+   "description": "CSharp Power!",
+   "authors": [
+     "Whisper"
+   ],
+   "logoFile": "Image\logo.rc.framework.png",
+   "dependencies": [
+ 	"RCFramework"
+   ]
+},
+{
+   "modid": "RC_Design",
+   "name": "RC.Design",
+   "description": "CSharp Power!",
+   "authors": [
+     "Whisper"
+   ],
+   "logoFile": "Image\logo.rc.framework.png",
+   "dependencies": [
+ 	"RCFramework"
+   ]
+},
+{
+   "modid": "RC_Extension",
+   "name": "RC.Extension",
+   "description": "CSharp Power!",
+   "authors": [
+     "Whisper"
+   ],
+   "logoFile": "Image\logo.rc.framework.png",
+   "dependencies": [
+ 	"RCFramework"
+   ]
+},
+{
+   "modid": "RC_IO",
+   "name": "RC.IO",
+   "description": "CSharp Power!",
+   "authors": [
+     "Whisper"
+   ],
+   "logoFile": "Image\logo.rc.framework.png",
+   "dependencies": [
+ 	"RCFramework"
+   ]
+},
+{
+   "modid": "RC_Native",
+   "name": "RC.Native",
+   "description": "CSharp Power!",
+   "authors": [
+     "Whisper"
+   ],
+   "logoFile": "Image\logo.rc.framework.png",
+   "dependencies": [
+ 	"RCFramework"
+   ]
+},
+{
+   "modid": "RC_Net",
+   "name": "RC.Net",
+   "description": "CSharp Power!",
+   "authors": [
+     "Whisper"
+   ],
+   "logoFile": "Image\logo.rc.framework.png",
+   "dependencies": [
+ 	"RCFramework"
+   ]
+},
+{
+   "modid": "RC_RMath",
+   "name": "RC.RMath",
+   "description": "CSharp Power!",
+   "authors": [
+     "Whisper"
+   ],
+   "logoFile": "Image\logo.rc.framework.png",
+   "dependencies": [
+ 	"RCFramework"
+   ]
+},
+{
+   "modid": "RC_Security",
+   "name": "RC.Security",
+   "description": "CSharp Power!",
+   "authors": [
+     "Whisper"
+   ],
+   "logoFile": "Image\logo.rc.framework.png",
+   "dependencies": [
+ 	"RCFramework"
+   ]
+},
+{
+   "modid": "RC_Windows",
+   "name": "RC.Windows",
+   "description": "CSharp Power!",
+   "authors": [
+     "Whisper"
+   ],
+   "logoFile": "Image\logo.rc.framework.png",
+   "dependencies": [
+ 	"RCFramework"
+   ]
+}
+]
